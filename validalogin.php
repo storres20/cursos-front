@@ -1,10 +1,11 @@
 <?php
   include("config/conexion.php");
   
-  if (isset($_POST['usuario']) && !empty($_POST['usuario'])) {
+  if (isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['password']) && !empty($_POST['password'])) {
     $usuario = $_POST['usuario'];
+    $password = $_POST['password'];
     
-    $query = "SELECT * FROM usuarios WHERE (nombre = '$usuario')";
+    $query = "SELECT * FROM usuarios WHERE (nombre = '$usuario' && password = '$password')";
     $result = mysqli_query($conn, $query);
     
     if (mysqli_num_rows($result) > 0) {
