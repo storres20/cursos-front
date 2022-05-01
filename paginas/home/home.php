@@ -5,9 +5,11 @@
   }
   
   $usuario = $_SESSION['usuario'];
+  $id_usuario = $_SESSION['id'];
   
   include_once '../../config/conexion.php';
-  $query = "SELECT * FROM preguntas";
+  //$query = "SELECT * FROM preguntas WHERE click = 0";
+  $query = "SELECT * FROM respuestas WHERE click = '0' AND id_usuario=$id_usuario";
   $result = mysqli_query($conn, $query);
 ?>
 
@@ -21,7 +23,7 @@
   
   <h1>Cuestionario de preguntas</h1>
   
-  <table class="table">
+  <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">N°</th>
@@ -39,7 +41,7 @@
     <tr>
       <th scope="row"><?php echo $std_num; ?></th>
       <td><?php echo $row['pregunta']; ?></td>
-      <td><button class="btn btn-primary">Entrar</button></td>
+      <td><a id="<?php echo $row['id'];?>" class="btn btn-primary" href="responder.php?id=<?php echo $row['id'];?>">Entrar</a></td>
     </tr>
   
   <?php $std_num++;} ?>
