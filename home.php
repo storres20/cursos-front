@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if ($_SESSION['rol'] !== "alumno" || $_SESSION['rol'] === "admin") {
+    header("location:index.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +14,11 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Bienvenido</h1>
+  <h1>Bienvenido Alumno</h1>
+  
+  <form action="validalogin.php?op=out" method="POST">
+    <button type="submit">Cerrar Session</button>
+  </form>
+  
 </body>
 </html>
