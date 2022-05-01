@@ -27,7 +27,15 @@
         <button type="submit" class="btn btn-primary">Ingresar</button>
         
         <br><br>
-        <div id="alerta"></div>
+        
+        <?php
+          if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'falta') {
+        ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>Datos incorrectos!</strong> Intente denuevo.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php } ?>
         
       </form>
     </div>
