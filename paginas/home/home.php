@@ -1,8 +1,10 @@
 <?php
   session_start();
   if ($_SESSION['rol'] !== "alumno" || $_SESSION['rol'] === "admin") {
-    header("location:index.php");
+    header("location:../../index.php");
   }
+  
+  $usuario = $_SESSION['usuario'];
 ?>
 
 <!DOCTYPE html>
@@ -17,14 +19,20 @@
   <!-- CSS Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   
-  <title>Document</title>
+  <title>Examen</title>
 </head>
 <body>
-  <h1>Bienvenido Alumno</h1>
+  <h1>Bienvenido <?php echo $usuario?></h1>
   
-  <form action="validalogin.php?op=out" method="POST">
+  <form action="../../validalogin.php?op=out" method="POST">
     <button type="submit" class="btn btn-primary">Cerrar Session</button>
   </form>
+  
+  <div>
+    <h1>Cuestionario de preguntas</h1>
+    
+    
+  </div>
   
   
   
