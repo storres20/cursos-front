@@ -1,7 +1,7 @@
 <?php
   session_start();
   if ($_SESSION['rol'] === "alumno" || $_SESSION['rol'] !== "admin") {
-    header("location:index.php");
+    header("location:../../index.php");
   }
 ?>
 
@@ -22,7 +22,7 @@
 <body>
   <h1>Bienvenido Administrador</h1>
   
-  <form action="validalogin.php?op=out" method="POST">
+  <form action="../../validalogin.php?op=out" method="POST">
     <button type="submit" class="btn btn-primary">Cerrar Session</button>
   </form>
   
