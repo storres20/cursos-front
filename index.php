@@ -16,7 +16,7 @@
   <div class="row mt-5">
     <div class="col-1 col-sm-1 col-md-3 col-lg-4"></div>
     <div class="col-10 col-sm-10 col-md-6 col-lg-4">
-      <form id="formulario" method="post">
+      <form id="formulario" method="post" action="validalogin.php?op=in">
         <h1><strong>Login</strong></h1>
         <input type="text" name="usuario" id="usuario" class="form-control" placeholder="usuario" required="true" maxlength="10" minlength="3">
         <br>
