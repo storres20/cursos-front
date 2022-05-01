@@ -13,6 +13,12 @@
     <button type="submit" class="btn btn-primary">Cerrar Session</button>
   </form>
   
+  <br><br>
+  
+  <form action="random.php" method="POST">
+    <button type="submit" class="btn btn-primary">Random</button>
+  </form>
+  
   
   
   <!-- JS Bootstrap 5 -->
