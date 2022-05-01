@@ -19,9 +19,9 @@
       $_SESSION['rol'] = $qry['rol'];
       
       if($qry['rol']=="admin"){
-          header("location:homeAdmin.php");
+          header("location:paginas/homeAdmin/homeAdmin.php");
       }else if($qry['rol']=="alumno"){
-          header("location:home.php");
+          header("location:paginas/home/home.php");
       }
       
     }else{
