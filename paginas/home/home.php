@@ -21,45 +21,31 @@
   
   <h1>Cuestionario de preguntas</h1>
   
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">N°</th>
+      <th scope="col">Pregunta</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+  
   <?php
     $std_num = 1;
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
   ?>
   
-  <div class="card-preg">
-    <h2>Pregunta #<?php echo $std_num; ?></h2>
-    
-    <input type="text" name="" id="" value="<?php echo $row['pregunta']; ?>" disabled style="width:100%">
-    <br><br>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        <?php echo $row['alt1']; ?>
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        <?php echo $row['alt2']; ?>
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        <?php echo $row['alt3']; ?>
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        <?php echo $row['alt4']; ?>
-      </label>
-    </div>
-    
-  </div>
-    <?php $std_num++;} ?>
+    <tr>
+      <th scope="row"><?php echo $std_num; ?></th>
+      <td><?php echo $row['pregunta']; ?></td>
+      <td><button class="btn btn-primary">Entrar</button></td>
+    </tr>
   
+  <?php $std_num++;} ?>
   
+    </tbody>
+</table>
   
   
   <!-- JS Bootstrap 5 -->
