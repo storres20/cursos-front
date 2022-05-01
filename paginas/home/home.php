@@ -9,13 +9,6 @@
   include_once '../../config/conexion.php';
   $query = "SELECT * FROM preguntas";
   $result = mysqli_query($conn, $query);
-  //$rows = array();
-  
- /*  $preguntas = mysqli_fetch_array($result);
-  print_r($preguntas); */
-  
-  //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-  //print_r($row)
 ?>
 
 <?php include '../../template/header.php' ?>
@@ -27,8 +20,6 @@
   </form>
   
   <h1>Cuestionario de preguntas</h1>
-  
-  
   
   <?php
     $std_num = 1;
