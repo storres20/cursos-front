@@ -17,6 +17,7 @@
       $_SESSION['usuario'] = $qry['usuario'];
       $_SESSION['password'] = $qry['password'];
       $_SESSION['rol'] = $qry['rol'];
+      $_SESSION['id'] = $qry['id'];
       
       if($qry['rol']=="admin"){
           header("location:paginas/homeAdmin/homeAdmin.php");
