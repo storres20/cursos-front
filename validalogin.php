@@ -26,14 +26,7 @@
       }
       
     }else{
-      
-      ?>
-        <script language="JavaScript">
-            alert('El nombre de usuario o la contraseña no coinciden. ¡Por favor repita de nuevo!');
-            document.location='index.php';
-        </script>
-      <?php
-      
+      header("location:index.php?mensaje=falta");
     }
   }else if($op=="out"){
     unset($_SESSION['usuario']);
