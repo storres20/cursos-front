@@ -6,7 +6,10 @@
   $pass = 'x6IVPuAiGLzujR6ukV6A';
   $db = 'bjip4tf1cstzcyhhev7r';
   
-  $conn = mysqli_connect($host, $user, $pass, $db);
+  //$conn = mysqli_connect($host, $user, $pass, $db);
+  
+  // Create connection
+  $conn = new mysqli($host, $user, $pass, $db);
   
   /* if ($conn) {
     echo "conectado";
