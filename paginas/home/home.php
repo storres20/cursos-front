@@ -7,31 +7,21 @@
   $usuario = $_SESSION['usuario'];
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
-  <!-- CSS Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-  <title>Examen</title>
-</head>
-<body>
+<?php include '../../template/header.php' ?>
+
   <h1>Bienvenido <?php echo $usuario?></h1>
   
   <form action="../../validalogin.php?op=out" method="POST">
     <button type="submit" class="btn btn-primary">Cerrar Session</button>
   </form>
   
-  <div>
-    <h1>Cuestionario de preguntas</h1>
-    
-    
+  <h1>Cuestionario de preguntas</h1>
+  
+  <div class="card-preg">
+    <h2>Pregunta #00</h2>
+    <input type="text" name="" id="">
+    <br><br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
   </div>
   
   
