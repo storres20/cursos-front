@@ -1,7 +1,7 @@
 <?php
   session_start();
   if ($_SESSION['rol'] !== "alumno" || $_SESSION['rol'] === "admin") {
-    header("location:../../index.php");
+    header("location:../../index.php?mensaje=usuario");
   }
   
   $usuario = $_SESSION['usuario'];
@@ -22,6 +22,16 @@
   </form>
   
   <h1>Cuestionario de preguntas</h1>
+  
+  <!-- Mensaje de Alerta de prevencion de fraude -->
+  <?php
+    if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'fraude') {
+  ?>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Tenga cuidado!</strong> Resuelva solo su examen.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <?php } ?>
   
   <table class="table table-striped">
   <thead>
