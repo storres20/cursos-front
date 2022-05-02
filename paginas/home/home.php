@@ -41,7 +41,7 @@
     <tr>
       <th scope="row"><?php echo $std_num; ?></th>
       <td><?php echo $row['pregunta']; ?></td>
-      <td><a id="<?php echo $row['id'];?>" class="btn btn-primary" href="responder.php?id=<?php echo $row['id'];?>">Entrar</a></td>
+      <td><a id="<?php echo $row['id'];?>" class="btn <?php echo ($row['click']==='0') ? 'btn-primary' : 'btn-secondary'; ?>" href="responder.php?id=<?php echo $row['id'];?>"><?php echo ($row['click']==="0") ? "Entrar" : "Enviado"; ?></a></td>
     </tr>
   
   <?php $std_num++;} ?>
