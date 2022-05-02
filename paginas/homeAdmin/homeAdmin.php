@@ -1,7 +1,7 @@
 <?php
   session_start();
   if ($_SESSION['rol'] === "alumno" || $_SESSION['rol'] !== "admin") {
-    header("location:../../index.php");
+    header("location:../../index.php?mensaje=usuario");
   }
   
   include_once '../../config/conexion.php';
