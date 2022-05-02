@@ -32,7 +32,7 @@
     unset($_SESSION['usuario']);
     unset($_SESSION['password']);
     unset($_SESSION['rol']);
-    header("location:index.php");
+    header("location:index.php?mensaje=out");
 }
 
 ?>
