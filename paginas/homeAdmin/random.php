@@ -16,7 +16,8 @@
     while($row_usuarios = $result_usuarios->fetch_assoc()) {
       $id_usuario = $row_usuarios['id'];
       
-      $query_select = "SELECT * FROM preguntas";
+      //$query_select = "SELECT * FROM preguntas";
+      $query_select = "SELECT * FROM preguntas ORDER BY RAND() LIMIT 3"; //Asignacion Random de preguntas
       $result = $conn->query($query_select);
 
       if ($result->num_rows > 0) {
@@ -44,7 +45,7 @@
         echo "0 results";
       }
   }
-    header("location:homeAdmin.php");
+    header("location:homeAdmin.php?mensaje=ok");
   }
   else {
     echo "0 results";
