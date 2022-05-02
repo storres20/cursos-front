@@ -29,44 +29,44 @@
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
       
       //para prevencion en caso un alumno ingrese URL forzado de pregunta ya respondida
-      if ($row['click']==='1') {
+      /* if ($row['click']==='1') {
         header("location:home.php");
-      }
+      } */
   ?>
   
   <div class="card-preg">
     <h2>Pregunta #</h2>
     
-    <input type="text" name="" id="" value="<?php echo $row['pregunta']; ?>" disabled style="width:100%">
-    <br><br>
+    <!-- <input type="text" name="" id="" value="<?php echo $row['pregunta']; ?>" disabled style="width:100%"> -->
+    <h3><?php echo $row['pregunta']; ?></h3>
     
     <form action="enviar.php?id=<?php echo $id_pregunta; ?>" method="post">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt1">
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt1" <?php echo ($row['res1']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt1']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt2">
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt2" <?php echo ($row['res2']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt2']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt3">
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt3" <?php echo ($row['res3']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt3']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt4">
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt4" <?php echo ($row['res4']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt4']; ?>
       </label>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary" >Enviar</button>
+    <button type="submit" class="btn btn-primary" <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >Enviar</button>
     <a class="btn btn-danger" href="home.php">Cancelar</a>
     
     </form>
