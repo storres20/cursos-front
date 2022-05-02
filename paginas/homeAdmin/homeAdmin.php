@@ -3,6 +3,11 @@
   if ($_SESSION['rol'] === "alumno" || $_SESSION['rol'] !== "admin") {
     header("location:../../index.php");
   }
+  
+  include_once '../../config/conexion.php';
+  $query = "SELECT * FROM respuestas";
+  $result = mysqli_query($conn, $query);
+  $rows = mysqli_num_rows($result);
 ?>
 
 <?php include '../../template/header.php' ?>
@@ -15,8 +20,9 @@
   
   <br><br>
   
+  <h3><?php echo ($rows > 0) ? "El Examen Random ya ha sido iniciado" : "Iniciar el Examen Random"; ?></h3>
   <form action="random.php" method="POST">
-    <button type="submit" class="btn btn-primary">Random</button>
+    <button type="submit" class="btn btn-primary" <?php echo ($rows > 0) ? "disabled" : ""; ?> >Random - Curso X</button>
   </form>
   
   
