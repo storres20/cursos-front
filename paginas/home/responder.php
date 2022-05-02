@@ -42,32 +42,32 @@
     
     <form action="enviar.php?id=<?php echo $id_pregunta; ?>" method="post">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt1" <?php echo ($row['res1']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt1" <?php echo ($row['res1']==="0") ? "" : "checked"; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt1']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt2" <?php echo ($row['res2']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt2" <?php echo ($row['res2']==="0") ? "" : "checked"; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt2']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt3" <?php echo ($row['res3']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt3" <?php echo ($row['res3']==="0") ? "" : "checked"; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt3']; ?>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt4" <?php echo ($row['res4']==="0") ? "" : "checked"; ?> <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="alt4" <?php echo ($row['res4']==="0") ? "" : "checked"; ?> >
       <label class="form-check-label" for="flexCheckDefault">
         <?php echo $row['alt4']; ?>
       </label>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary" <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >Enviar</button>
-    <a class="btn btn-danger" href="home.php"><?php echo ($row['click']==="1") ? "Regresar" : "Cancelar"; ?></a>
+    <button type="submit" class="btn btn-primary" >Enviar</button>
+    <a class="btn btn-danger" href="home.php">Cancelar</a>
     
     </form>
     
