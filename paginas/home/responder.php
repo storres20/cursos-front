@@ -28,10 +28,10 @@
     $std_num = 1;
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
       
-      //para prevencion en caso un alumno ingrese URL forzado de pregunta ya respondida
-      /* if ($row['click']==='1') {
+      //para prevencion en caso un alumno ingrese URL forzado de pregunta de otro compañero de clase
+      if ($row['id_usuario'] !== $id_usuario) {
         header("location:home.php");
-      } */
+      }
   ?>
   
   <div class="card-preg">
