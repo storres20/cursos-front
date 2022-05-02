@@ -35,6 +35,18 @@
           <strong>Datos incorrectos!</strong> Intente denuevo.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        <?php } else if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'usuario') { 
+        ?>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Mantengase en su Sesion Actual!</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php } else if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'out') { 
+        ?>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <strong>Su sesion ha finalizado!</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <?php } ?>
         
       </form>
