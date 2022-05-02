@@ -67,7 +67,7 @@
     </div>
     <br>
     <button type="submit" class="btn btn-primary" <?php echo ($row['click']==="1") ? "disabled" : ""; ?> >Enviar</button>
-    <a class="btn btn-danger" href="home.php">Cancelar</a>
+    <a class="btn btn-danger" href="home.php"><?php echo ($row['click']==="1") ? "Regresar" : "Cancelar"; ?></a>
     
     </form>
     
