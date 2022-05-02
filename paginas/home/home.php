@@ -9,7 +9,7 @@
   
   include_once '../../config/conexion.php';
   //$query = "SELECT * FROM preguntas WHERE click = 0";
-  $query = "SELECT * FROM respuestas WHERE click = '0' AND id_usuario=$id_usuario";
+  $query = "SELECT * FROM respuestas WHERE id_usuario=$id_usuario";
   $result = mysqli_query($conn, $query);
 ?>
 
