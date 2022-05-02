@@ -9,3 +9,5 @@ Las respuestas que son ingresadas por los alumnos, se envian a la API y este las
 
 Permite un Login y la vista para el alumno y para el administrador
 
+<p align="center"><img src="https://user-images.githubusercontent.com/81504385/166186063-e02df522-5dad-417f-a462-f580f2028c4a.png"/></p>
+
