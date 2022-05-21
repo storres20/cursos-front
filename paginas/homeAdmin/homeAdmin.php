@@ -80,7 +80,13 @@
             <td class="<?php echo ($row['finalizado']) ? 'text-danger' : 'text-primary'; ?>" >
               <?php echo ($row['finalizado']) ? 'Finalizado' : 'En tramite'; ?>
             </td>
-            <td><button class="btn btn-danger" title="Restaurar Exámen"><i class="bi bi-arrow-clockwise"></i></button> </td>
+            
+            
+            <td>
+              <form action="restaurar.php?id=<?php echo $row['id_usuario']; ?>" method="post">
+                <button class="btn btn-danger" title="Restaurar Exámen"><i class="bi bi-arrow-clockwise"></i></button>
+              </form>
+            </td>
           </tr>
           
           <?php $std_num++;} ?>
