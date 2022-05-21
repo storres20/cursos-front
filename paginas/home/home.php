@@ -9,6 +9,7 @@
   
   $usuario = $_SESSION['usuario'];
   $id_usuario = $_SESSION['id'];
+  $_SESSION['nota'] = 0;
   
   /* Conexion a Base de Datos */
   include_once '../../config/conexion.php';
@@ -54,6 +55,7 @@
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
               $_SESSION['finalizado'] = $row['finalizado'];
               $nota = $row['nota'];
+              $_SESSION['nota'] = $_SESSION['nota'] + $nota;
           ?>
         
           <tr>
@@ -78,10 +80,10 @@
   </div>
   
   <!-- Resultado de Cuestionario -->
-  <div class="card" style="margin: 20px;">
+  <div class="card <?php echo ($_SESSION['finalizado']==='0') ? 'd-none' : ''; ?>" style="margin: 20px;">
     <div class="card-body">
-      <h2 class="card-title">Resultado Total</h2>
-      <p class="card-text">El puntaje obtenido es: <b>xx</b></p>
+      <h2 class="card-title text-muted">Resultado Total</h2>
+      <h5 class="card-text">El puntaje obtenido es:&emsp; <b><?php echo $_SESSION['nota']; ?></b></h5>
     </div>
   </div>
   
