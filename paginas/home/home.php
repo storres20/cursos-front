@@ -53,6 +53,7 @@
             $std_num = 1;
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
               $_SESSION['finalizado'] = $row['finalizado'];
+              $nota = $row['nota'];
           ?>
         
           <tr>
@@ -61,7 +62,7 @@
             <td>
               <a id="<?php echo $row['id'];?>" class="btn <?php echo ($row['click']==='0') ? 'btn-primary' : 'btn-secondary'; ?>" href="responder.php?id=<?php echo $row['id'];?>"><?php echo ($row['click']==="0") ? "Entrar" : "Enviado"; ?></a>
             </td>
-            <td></td>
+            <td><?php echo ($_SESSION['finalizado']==="0") ? "" : "$nota / 1"; ?></td>
           </tr>
         
           <?php $std_num++;} ?>
