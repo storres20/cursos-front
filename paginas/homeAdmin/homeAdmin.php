@@ -16,14 +16,17 @@
 ?>
 
 <?php include '../../template/header.php' ?>
+
+<?php include '../../template/navAdmin.php' ?>
+
   
   <div class="card" style="margin: 20px;">
     <div class="card-body">
       <h1 class="card-title">Bienvenido Admin <?php echo $usuario?></h1>
       
-      <form action="../../validalogin.php?op=out" method="POST">
+      <!-- <form action="../../validalogin.php?op=out" method="POST">
         <button type="submit" class="btn btn-primary">Cerrar Session</button>
-      </form>
+      </form> -->
       
       <br><br>
   
@@ -48,7 +51,7 @@
   
   
   <!-- Listado de Alumnos -->
-  <div class="card" style="margin: 20px;">
+  <div class="card <?php echo ($rows > 0) ? "" : "d-none"; ?>" style="margin: 20px;">
     <div class="card-body">
       <h5 class="card-title">Listado de Alumnos</h5>
       
@@ -84,7 +87,9 @@
             
             <td>
               <form action="restaurar.php?id=<?php echo $row['id_usuario']; ?>" method="post">
-                <button class="btn btn-danger" title="Restaurar Exámen"><i class="bi bi-arrow-clockwise"></i></button>
+                <button class="btn btn-danger" title="Restaurar Exámen" onclick="return confirm('¿ Está seguro de Finalizar el Exámen ?')" <?php echo ($row['finalizado']) ? '' : 'disabled'; ?>>
+                  <i class="bi bi-arrow-clockwise"></i>
+                </button>
               </form>
             </td>
           </tr>
