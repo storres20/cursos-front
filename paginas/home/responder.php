@@ -71,7 +71,7 @@
           <br>
           
           <button type="submit" class="btn btn-primary" <?php echo ($row['finalizado']==="0") ? "" : "disabled"; ?> >Enviar</button>
-          <a class="btn <?php echo ($row['finalizado']==="0") ? "btn-danger" : "btn-warning"; ?>" href="home.php"><?php echo ($row['finalizado']==="0") ? "Cancelar" : "Regresar"; ?></a>
+          <a class="btn btn-danger" href="home.php"><?php echo ($row['finalizado']==="0") ? "Cancelar" : "Regresar"; ?></a>
         
         </form>
         
