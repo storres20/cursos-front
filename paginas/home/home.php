@@ -52,6 +52,7 @@
           <?php
             $std_num = 1;
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+              $_SESSION['finalizado'] = $row['finalizado'];
           ?>
         
           <tr>
@@ -69,7 +70,9 @@
       </table>
       
       <!-- Button - Finalizar Examen -->
-      <button type="button" class="btn btn-danger">Finalizar Examen</button>
+      <form action="finalizado.php">
+        <button onclick="return confirm('¿ Está seguro de Finalizar el Exámen ?')" type="submit" class="btn btn-danger" <?php echo ($_SESSION['finalizado']==="0") ? "" : "disabled"; ?> >Finalizar Examen</button>
+      </form>
     </div>
   </div>
   
