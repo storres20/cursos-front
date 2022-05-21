@@ -19,13 +19,15 @@
 ?>
 
 <?php include '../../template/header.php' ?>
+
+<?php include '../../template/navAlumno.php' ?>
   
   <div class="card" style="margin: 20px;">
     <div class="card-body">
       <h1 class="card-title">Bienvenido <?php echo $usuario?></h1>
-      <form class="mb-2" action="../../validalogin.php?op=out" method="POST">
+      <!-- <form class="mb-2" action="../../validalogin.php?op=out" method="POST">
         <button type="submit" class="btn btn-primary">Cerrar Session</button>
-      </form>
+      </form> -->
       <h2 class="card-subtitle mb-2 text-muted">Cuestionario de preguntas</h2>
       
       <!-- Mensaje de Alerta de prevencion de fraude -->
