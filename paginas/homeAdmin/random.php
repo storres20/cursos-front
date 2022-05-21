@@ -15,6 +15,7 @@
     // output data of each row
     while($row_usuarios = $result_usuarios->fetch_assoc()) {
       $id_usuario = $row_usuarios['id'];
+      $usuario_nombre = $row_usuarios['usuario'];
       
       //$query_select = "SELECT * FROM preguntas";
       $query_select = "SELECT * FROM preguntas ORDER BY RAND() LIMIT 3"; //Asignacion Random de preguntas
@@ -37,7 +38,7 @@
           
           $cant = $ans1 + $ans2 + $ans3 + $ans4;
           
-          $query_insert = "INSERT INTO respuestas (id_pregunta, id_usuario, pregunta, alt1, alt2, alt3, alt4, ans1, ans2, ans3, ans4, cant) VALUES ('$id_pregunta', '$id_usuario', '$pregunta', '$alt1', '$alt2', '$alt3', '$alt4', '$ans1', '$ans2', '$ans3', '$ans4', '$cant')";
+          $query_insert = "INSERT INTO respuestas (id_pregunta, id_usuario, usuario_nombre, pregunta, alt1, alt2, alt3, alt4, ans1, ans2, ans3, ans4, cant) VALUES ('$id_pregunta', '$id_usuario', '$usuario_nombre', '$pregunta', '$alt1', '$alt2', '$alt3', '$alt4', '$ans1', '$ans2', '$ans3', '$ans4', '$cant')";
           
           if ($conn->query($query_insert) === TRUE) {
             //echo "New record created successfully";
