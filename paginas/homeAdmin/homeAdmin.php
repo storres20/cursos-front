@@ -4,7 +4,10 @@
     header("location:../../index.php?mensaje=usuario");
   }
   
-  $usuario = $_SESSION['usuario'];
+  $usuario = $_SESSION['usuario']; // usuario Administrador
+  
+  $_SESSION['usuario_nombre'] = 0; // nombre de alumno
+  
   
   include_once '../../config/conexion.php';
   $query = "SELECT * FROM respuestas";
@@ -59,12 +62,29 @@
           </tr>
         </thead>
         <tbody>
+        
+          <?php
+            $std_num = 1;
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+              if ($_SESSION['usuario_nombre'] === $row['usuario_nombre']) {
+                continue;
+              }
+              
+              $_SESSION['usuario_nombre'] = $row['usuario_nombre'];
+              
+          ?>
+        
           <tr>
-            <td>1</td>
-            <td>juan</td>
-            <td>Finalizado</td>
+            <td><?php echo $std_num; ?></td>
+            <td><?php echo $row['usuario_nombre']; ?></td>
+            <td class="<?php echo ($row['finalizado']) ? 'text-danger' : 'text-primary'; ?>" >
+              <?php echo ($row['finalizado']) ? 'Finalizado' : 'En tramite'; ?>
+            </td>
             <td><button class="btn btn-danger" title="Restaurar Exámen"><i class="bi bi-arrow-clockwise"></i></button> </td>
           </tr>
+          
+          <?php $std_num++;} ?>
+          
         </tbody>
         <tfoot>
           <tr>
