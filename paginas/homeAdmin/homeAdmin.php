@@ -35,8 +35,6 @@
         <button type="submit" class="btn btn-primary" <?php echo ($rows > 0) ? "disabled" : ""; ?> >Random - Curso X</button>
       </form>
       
-      <br>
-  
       <?php
         if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'ok') {
       ?>
