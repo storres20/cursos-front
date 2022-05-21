@@ -30,7 +30,14 @@
           $alt3 = $row['alt3'];
           $alt4 = $row['alt4'];
           
-          $query_insert = "INSERT INTO respuestas (id_pregunta, id_usuario, pregunta, alt1, alt2, alt3, alt4) VALUES ('$id_pregunta', '$id_usuario', '$pregunta', '$alt1', '$alt2', '$alt3', '$alt4')";
+          $ans1 = $row['ans1'];
+          $ans2 = $row['ans2'];
+          $ans3 = $row['ans3'];
+          $ans4 = $row['ans4'];
+          
+          $cant = $ans1 + $ans2 + $ans3 + $ans4;
+          
+          $query_insert = "INSERT INTO respuestas (id_pregunta, id_usuario, pregunta, alt1, alt2, alt3, alt4, ans1, ans2, ans3, ans4, cant) VALUES ('$id_pregunta', '$id_usuario', '$pregunta', '$alt1', '$alt2', '$alt3', '$alt4', '$ans1', '$ans2', '$ans3', '$ans4', '$cant')";
           
           if ($conn->query($query_insert) === TRUE) {
             //echo "New record created successfully";
