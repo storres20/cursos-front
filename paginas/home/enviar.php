@@ -10,6 +10,8 @@ session_start();
   //variables
   $usuario = $_SESSION['usuario'];
   $id_usuario = $_SESSION['id'];
+  
+  /* Captura el ID que viene en la URL */
   $id_pregunta = $_GET['id'];
   
   include_once '../../config/conexion.php';
