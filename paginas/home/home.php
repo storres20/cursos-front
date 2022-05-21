@@ -44,6 +44,7 @@
             <th class="text-center" scope="col">N°</th>
             <th scope="col">Pregunta</th>
             <th scope="col">Accion</th>
+            <th scope="col">Resultado</th>
           </tr>
         </thead>
         <tbody>
@@ -59,6 +60,7 @@
             <td>
               <a id="<?php echo $row['id'];?>" class="btn <?php echo ($row['click']==='0') ? 'btn-primary' : 'btn-secondary'; ?>" href="responder.php?id=<?php echo $row['id'];?>"><?php echo ($row['click']==="0") ? "Entrar" : "Enviado"; ?></a>
             </td>
+            <td></td>
           </tr>
         
           <?php $std_num++;} ?>
@@ -74,8 +76,8 @@
   <!-- Resultado de Cuestionario -->
   <div class="card" style="margin: 20px;">
     <div class="card-body">
-      <h2 class="card-title">Resultado</h2>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h2 class="card-title">Resultado Total</h2>
+      <p class="card-text">El puntaje obtenido es: <b>xx</b></p>
     </div>
   </div>
   
