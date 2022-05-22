@@ -91,7 +91,7 @@
                   }
                 }
               ?>
-              <?php echo $cont; ?>
+              <?php echo ($row['finalizado']) ? $cont : ''; ?>
             </td>
             
             <td class="d-flex">
