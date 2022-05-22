@@ -73,6 +73,7 @@
               
               $_SESSION['usuario_nombre'] = $row['usuario_nombre'];
               
+              
           ?>
         
           <tr>
@@ -91,7 +92,13 @@
                   }
                 }
               ?>
-              <?php echo ($row['finalizado']) ? $cont : ''; ?>
+              <?php echo ($row['finalizado']) ? $cont : '';
+              
+                include_once '../../config/conexion.php';
+                $query = "SELECT * FROM respuestas";
+                $result2 = mysqli_query($conn, $query);
+                /* $row3 = mysqli_fetch_array($result2,MYSQLI_ASSOC); */
+              ?>
             </td>
             
             <td class="d-flex">
