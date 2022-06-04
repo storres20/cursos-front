@@ -14,10 +14,12 @@ Permite un Login y la vista para el alumno y para el administrador
 ## Roles
 
 <div align="center">
+
 | ROLES | DESCRIPCIÓN | 
 |--|--|
 | 🧑‍💻 Administrador | Profesor encargado del curso | 
 | 🧑‍🎓 Alumno | Estudiante o persona matriculada en el curso | 
+
 </div>
 
 ## Inicio de Sesion
