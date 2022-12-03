@@ -1,13 +1,8 @@
-<h1 align="center">Cursos - Frontend</h1>
+<h1 align="center">Courses - Frontend</h1>
 
-## Descripción y contexto
+## Description and context
 
-💻📚 **Cursos - Frontend** 📚💻 es una aplicacion web que permite la toma de examenes con preguntas random de un banco de preguntas 📚📚📚
-
-La web app realiza consultas de PETICION a la API de **Cursos - Backend** acerca de las preguntas a tomar a los alumnos y las envia al cliente.
-Las respuestas que son ingresadas por los alumnos, se envian a la API y este las almacena en la base de datos.
-
-Permite un Login y la vista para el alumno y para el administrador
+💻📚 Courses - Frontend 💻📚 The web app performs PETITION queries to the Courses - Backend API about the questions to be taken to the students and sends them to the client. The answers that are entered by the students are sent to the API and it stores them in the database.  Allows a login and view for the student and for the administrator.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/81504385/166186063-e02df522-5dad-417f-a462-f580f2028c4a.png"/></p>
 
@@ -15,23 +10,23 @@ Permite un Login y la vista para el alumno y para el administrador
 
 <div align="center">
 
-| ROLES | DESCRIPCIÓN | 
+| ROLES | DESCRIPTION | 
 |--|--|
-| 🧑‍💻 Administrador | Profesor encargado del curso | 
-| 🧑‍🎓 Alumno | Estudiante o persona matriculada en el curso | 
+| 🧑‍💻 Administrator | Teacher in charge of the course | 
+| 🧑‍🎓 Student | Student or person enrolled in the course | 
 
 </div>
 
-## Inicio de Sesion
+## Login
 
-Se puede acceder a la página mediante el siguiente [link](http://cursos-front.herokuapp.com/), y además se adjunta la tabla que contiene los respectivos usuarios y contraseñas para cada rol. Con el fin de interactuar con todas las vistas y funcionalidades de la interfaz.
+The page can be accessed through the following [link](http://cursos-front.herokuapp.com/), and the table containing the respective users and passwords for each role is also attached. In order to interact with all the views and functionalities of the interface.
 
 <div align="center">
 
-| ROL | USUARIO | CONTRASEÑA | 
+| ROL | USER | PASSWORD | 
 |--|--|--|
-|🧑‍💻 Administrador|cesar|cesar123|
-|🧑‍🎓 Alumno |mario|mario123|
-|🧑‍🎓 Alumno |gilmer|gilmer123|
+|🧑‍💻 Administrator|cesar|cesar123|
+|🧑‍🎓 Student |mario|mario123|
+|🧑‍🎓 Student |gilmer|gilmer123|
 
 </div>
